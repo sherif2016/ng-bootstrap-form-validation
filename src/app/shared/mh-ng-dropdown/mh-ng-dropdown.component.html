@@ -1,0 +1,14 @@
+<div class="row">
+
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>{{optionSelected || 'Selection an action'}}</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+        <button class="dropdown-item" (click)="onChangeOption('Action -1')">Action - 1</button>
+        <button class="dropdown-item" (click)="onChangeOption('Another Action')">Another Action</button>
+        <button class="dropdown-item" (click)="onChangeOption('Something else is here')">Something else is here</button>
+      </div>
+    </div>
+  </div>
+
+</div>

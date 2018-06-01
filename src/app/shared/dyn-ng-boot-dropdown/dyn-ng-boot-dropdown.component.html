@@ -1,0 +1,12 @@
+<div class="row">
+
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>{{optionSelected?.displayText || 'Select an action'}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+          <button class="dropdown-item" *ngFor="let option of options" (click)="onChangeOption(option)">{{option.displayText}}</button>
+        </div>
+      </div>
+    </div>
+  
+  </div>

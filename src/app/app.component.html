@@ -1,0 +1,30 @@
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmitForm()">
+  <div class="row">
+
+    <div class="col-2">
+      <app-mh-ng-dropdown formControlName="bootDDL1"></app-mh-ng-dropdown>
+    </div>
+    <div class="col-2">
+      <app-mh-ng-dropdown [ngClass]="{'btn btn-outline-danger mr-2': eactiveForm?.value?.bootDDL2 === ''}" formControlName="bootDDL2"></app-mh-ng-dropdown>
+    </div>
+
+    <div class="col-2">
+      <dyn-ng-boot-dropdown [ngClass]="{'btn btn-outline-danger mr-2': eactiveForm?.value?.dynDDL1 === ''}" formControlName="dynDDL1"
+        [options]="items"></dyn-ng-boot-dropdown>
+    </div>
+
+    <div class="col-2">
+      <button class="btn btn-outline-success" type="submit" [disabled]="!reactiveForm.valid">Submit</button>
+      Form is valid: {{ reactiveForm.valid ? 'true' : 'false' }}
+    </div>
+
+  </div>
+
+</form>
+
+<p></p>
+
+<div style="width:99%; border:1px gray solid; vertical-align:-webkit-baseline-middle">
+  <p>Value:</p>
+  <pre>{{ reactiveForm.value | json }}</pre>
+</div>
